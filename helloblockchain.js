@@ -52,11 +52,10 @@ function init() {
     setup();
 
     printNetworkDetails();
-    deployChaincode();
-    return false;
+    
     //Check if chaincode is already deployed
     //TODO: Deploy failures aswell returns chaincodeID, How to address such issue?
-    if (fileExists(chaincodeIDPath)) {
+    if (!fileExists(chaincodeIDPath)) {
         // Read chaincodeID and use this for sub sequent Invokes/Queries
         chaincodeID = fs.readFileSync(chaincodeIDPath, 'utf8');
         chain.getUser(newUserName, function(err, user) {
