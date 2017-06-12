@@ -14,19 +14,5 @@
          "b",
          "200"
       ]
-   },
-   "invokeRequest":{
-      "functionName":"invoke",
-      "args":[
-         "a",
-         "b",
-         "10"
-      ]
-   },
-   "queryRequest":{
-      "functionName":"query",
-      "args":[
-         "a"
-      ]
    }
 }
